@@ -13,6 +13,7 @@
         "webfinger": "*",
         "body-parser": "*",
         "express-session": "*",
-        "cookie-parser": "*"
+        "cookie-parser": "*",
+        "passport-azure-ad": "*"
     }
 }
