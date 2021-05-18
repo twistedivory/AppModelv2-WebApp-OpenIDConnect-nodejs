@@ -1,6 +1,6 @@
 exports.creds = {
   // Required
-  identityMetadata: 'https://login.microsoftonline.com/<tenant_name>.onmicrosoft.com/v2.0/.well-known/openid-configuration', 
+  identityMetadata: 'https://login.microsoftonline.com/b28e3a2b-b57d-4c65-96af-2970a71f6dd4.onmicrosoft.com/v2.0/.well-known/openid-configuration', 
   // or equivalently: 'https://login.microsoftonline.com/<tenant_guid>/v2.0/.well-known/openid-configuration'
   //
   // or you can use the common endpoint
@@ -8,11 +8,11 @@ exports.creds = {
   // To use the common endpoint, you have to either turn `validateIssuer` off, or provide the `issuer` value.
 
   // Required, the client ID of your app in AAD  
-  clientID: '<your_client_id>',
+  clientID: '192a4621-8d8f-4405-8d55-2ab9d93b0d89',
 
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
   // If app key contains '\', replace it with '\\'.
-  clientSecret: '<your_client_secret>', 
+  clientSecret: 'e9siJQ-t451AyNDp2P8ul~hUIh_-.hY937', 
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   // If you want to get access_token, you must use 'code', 'code id_token' or 'id_token code' 
@@ -22,7 +22,7 @@ exports.creds = {
   responseMode: 'form_post', 
 
   // Required, the reply URL registered in AAD for your app
-  redirectUrl: 'http://localhost:3000/auth/openid/return', 
+  redirectUrl: 'https://ancient-fjord-50956.herokuapp.com/auth/openid/return', 
 
   // Required if we use http for redirectUrl
   allowHttpForRedirectUrl: true,
@@ -70,7 +70,7 @@ exports.creds = {
 };
 
 // The url you need to go to destroy the session with AAD
-exports.destroySessionUrl = 'https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=http://localhost:3000';
+exports.destroySessionUrl = 'https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=https://ancient-fjord-50956.herokuapp.com';
 
 // If you want to use the mongoDB session store for session middleware, set to true; otherwise we will use the default
 // session store provided by express-session.
